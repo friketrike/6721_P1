@@ -9,30 +9,33 @@
 # import problem_node.py as pn
 # impora serach_algorithms.py as sa
 
+
 def set_path_to_goal(node):
     path_to_goal = []
     while (node.parent):
         path_to_goal.insert(0, node)
         node = node.parent
-        # TODO do we really want to delete the upstream reference?
-        # del(path_to_goal[0].parent)
 
     # don't forget to include the start state!    
     path_to_goal.insert(0, node)
     return path_to_goal
 
-def find_goal(open_list, closed_list, search_algorithm, goal_test, generate_children):
+def find_goal(start_node, search_algorithm):
     # TODO check that search_algorithm(), goal_test() and generate_children()
     # exist, otherwise give a usage warning
-    while(open_list):
+
+    open_list = [start_node]
+    closed_list = []
+
+    while open_list:
         curr_node = open_list.pop(0)
-        print(['checking node: ', curr_node.value])
+        # print(['checking node: ', curr_node.value])
         # We found it, return a list with the path
-        if goal_test(curr_node):
+        if curr_node.goal_test():
             return set_path_to_goal(curr_node)
         else:
             closed_list.append(curr_node)
-            search_algorithm(curr_node, open_list, closed_list, generate_children)
+            search_algorithm(curr_node, open_list, closed_list)
 
     return None
 

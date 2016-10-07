@@ -4,33 +4,27 @@
 # Suppose that a state generator (generate_children) function exists
 # generating function needs to set the parent
 
-def dfs(curr_node, open_list, closed_list, generate_children):
+
+def dfs(curr_node, open_list, closed_list):
     # no children, generate 'em
     if not curr_node.children:
-        generate_children(curr_node)
+        curr_node.expand()
 
-    # delete redundant children and put them into lists, keep the deletion
-    # of redundancies at the algorithm level since some algorithms will
-    # seek to replace parenthood for existing children
+    # avoid including listed children redundantly in the open list (no infinite loops here)
     for child in reversed(curr_node.children):
-        if open_list.__contains__(child) or closed_list.__contains__(child):
-            curr_node.children.remove(child)
-        else:
+        if not (open_list.__contains__(child) or closed_list.__contains__(child)):
             open_list.insert(0, child)
             child.parent = curr_node
 
-def bfs(curr_node, open_list, closed_list, generate_children):
+
+def bfs(curr_node, open_list, closed_list):
     # no children, generate 'em
     if not curr_node.children:
-        generate_children(curr_node)
+        curr_node.expand()
 
-    # delete redundant children and put them into lists, keep the deletion
-    # of redundancies at the algorithm level since some algorithms will
-    # seek to replace parenthood for existing children
+    # avoid including listed children redundantly in the open list (no infinite loops here)
     for child in curr_node.children:
-        if open_list.__contains__(child) or closed_list.__contains__(child):
-            curr_node.children.remove(child)
-        else:
+        if not (open_list.__contains__(child) or closed_list.__contains__(child)):
             open_list.append(child)
             child.parent = curr_node
 
