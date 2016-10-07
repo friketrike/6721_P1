@@ -7,10 +7,9 @@
 
 class Problem:
     """Common class for all problems subject to search, construct with ... TODO docs"""
-    def __init__(self, node_goal_test, state_transitions, node_greater_than, h=lambda state: 1):
+    def __init__(self, node_goal_test, state_transitions, h=lambda state: 1):
         self.node_goal_test = node_goal_test
         self.state_transitions = state_transitions
-        self.node_greater_than = node_greater_than
         self.h = h
 
 
@@ -27,9 +26,6 @@ class Node:
     def expand(self):
         for t in self.problem.state_transitions:
             self.children.append(Node(self.problem, t(self.state), self.cost+1, parent=self, children=[]))
-
-    def gt(self, node):
-        return self.problem.node_greater_than(self, node)
 
     def goal_test(self):
         return self.problem.node_goal_test(self)
