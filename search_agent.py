@@ -26,6 +26,7 @@ def find_goal(open_list, closed_list, search_algorithm, goal_test, generate_chil
     # exist, otherwise give a usage warning
     while(open_list):
         curr_node = open_list.pop(0)
+        print(['checking node: ', curr_node.value])
         # We found it, return a list with the path
         if goal_test(curr_node):
             return set_path_to_goal(curr_node)
