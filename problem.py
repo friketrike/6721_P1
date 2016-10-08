@@ -25,7 +25,10 @@ class Node:
 
     def expand(self):
         for t in self.problem.state_transitions:
-            self.children.append(Node(self.problem, t(self.state), self.cost+1, parent=self, children=[]))
+            new_state = t(self.state)
+            if new_state:
+                self.children.append(Node(self.problem, new_state,
+                                          self.cost+1, parent=self, children=[]))
 
     def goal_test(self):
         return self.problem.node_goal_test(self)

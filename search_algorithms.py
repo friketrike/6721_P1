@@ -10,13 +10,20 @@ def expand_if(curr_node):
 
 def dfs(curr_node, open_list, closed_list):
     expand_if(curr_node)
+    dfs.counter += 1
 
     # avoid including listed children redundantly in the open list (no infinite loops here)
+    # print('---', dfs.counter, ' ---\n', curr_node.state[0:3],
+    #       '\n', curr_node.state[3:6],
+    #       '\n', curr_node.state[6:9])
     for child in reversed(curr_node.children):
         if not (any(node.state == child.state for node in open_list) or
                 any(node.state == child.state for node in closed_list)):
             open_list.insert(0, child)
+            # print('\t', dfs.counter, child.state)
             child.parent = curr_node
+
+dfs.counter = 0
 
 
 def bfs(curr_node, open_list, closed_list):
@@ -33,29 +40,24 @@ def bfs(curr_node, open_list, closed_list):
 def best_first(curr_node, open_list, closed_list):
     expand_if(curr_node)
 
-# avoid including listed children redundantly in the open list (no infinite loops here)
+    # avoid including listed children redundantly in the open list (no infinite loops here)
     for child in sorted(curr_node.children, key=lambda node: node.h, reverse=True):
         if(not (any(node.state == child.state for node in open_list) or
                 any(node.state == child.state for node in closed_list))):
             open_list.insert(0, child)
             child.parent = curr_node
 
-# For A*, we could use this snippet but figure out backtracking
-# not any((node.h + node.cost) <= (child.h + child.cost) for node in open_list):
-
 
 def a_star(curr_node, open_list, closed_list):
     expand_if(curr_node)
 
-# avoid including listed children redundantly in the open list (no infinite loops here)
+    # avoid including listed children redundantly in the open list (no infinite loops here)
     for child in curr_node.children:
         if (not (any(node.state == child.state for node in open_list) or
-                     any(node.state == child.state for node in closed_list))):
+                 any(node.state == child.state for node in closed_list))):
             open_list.insert(0, child)
             child.parent = curr_node
-    open_list.sort(key=lambda node: node.h + node.cost, reverse=True)
-
-
+    open_list.sort(key=lambda node: node.h + node.cost)
 
 
 
