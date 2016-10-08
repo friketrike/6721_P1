@@ -203,39 +203,49 @@ left_branch_start_state = [2, 3, 4,
                            1, 8, 5,
                            7, 6, 'B']
 
-start_node = problem.Node(the_problem, left_branch_start_state)
+random_start_state = rand_perm(goal_state, 8)
 
-n_tests = 3
+uninformed_start_states = [left_branch_start_state, random_start_state]
 
-dfs_times = []
-print('\n', 'starting DFS, forcing start state along left sub-tree, running 3 times')
-for i in range(n_tests):
-    start = timer()
-    dfs_path = search_agent.find_goal(start_node, search_algorithms.dfs)
-    end = timer()
-    dfs_times.append(end - start)
-while dfs_path:
-    n = dfs_path.pop(0)
-    print_8puzzle_state(n.state)
-print('DFS took ', dfs_times, ' respectively for 3 executions on a forced-optimal start-state')
+trial = [{'runs': 3, 's': ', forcing start state along left sub-tree, running 3 times'},
+         {'runs': 1, 's': ''}]
+
+for j, start_state in enumerate(uninformed_start_states):
+    start_node = problem.Node(the_problem, start_state)
+
+    dfs_times = []
+    print('\n', 'starting DFS', trial[j]['s'])
+    for i in range(trial[j]['runs']):
+        start = timer()
+        dfs_path = search_agent.find_goal(start_node, search_algorithms.dfs)
+        end = timer()
+        dfs_times.append(end - start)
+    # while dfs_path:
+    #     n = dfs_path.pop(0)
+    #     print_8puzzle_state(n.state)
+    print('The path tends to be long, so we\'ll just say that the cost was ', dfs_path.pop().cost, '\n')
+    print('DFS took ', dfs_times)
+    del (dfs_path, dfs_times)
 
 
-bfs_times = []
-print('\n', 'starting bfs, forcing start state along left sub-tree, running 3 times')
-for i in range(n_tests):
-    start = timer()
-    bfs_path = search_agent.find_goal(start_node, search_algorithms.bfs)
-    end = timer()
-    bfs_times.append(end - start)
-while bfs_path:
-    n = bfs_path.pop(0)
-    print_8puzzle_state(n.state)
-print('BFS took ', dfs_times, ' respectively for 3 executions')
+    bfs_times = []
+    print('\n', 'starting bfs', trial[j]['s'])
+    for i in range(trial[j]['runs']):
+        start = timer()
+        bfs_path = search_agent.find_goal(start_node, search_algorithms.bfs)
+        end = timer()
+        bfs_times.append(end - start)
+    while bfs_path:
+        n = bfs_path.pop(0)
+        print_8puzzle_state(n.state)
+    print('\nBFS took ', bfs_times, ' with a cost of ', n.cost, '\n')
+    del (bfs_path, bfs_times)
 
 
 # ------------- Heuristic searches, now try with random permutations --------
 
 # Randomly create 3 starting states to be tested with each heuristic
+n_tests = 3
 start_states = []
 for i in range(n_tests):
     start_state = rand_perm(goal_state, 10)
@@ -256,10 +266,12 @@ for j in range(len(h_all)):
         best_first_path = search_agent.find_goal(start_node, search_algorithms.best_first)
         end = timer()
         best_first_times[j][i] = end - start
-        while best_first_path:
-            n = best_first_path.pop(0)
-            print_8puzzle_state(n.state)
-            print(h_all[j].__name__, ' h = ', n.h, ' (cost incurred: ', n.cost, ')')
+        # while best_first_path:
+        #     n = best_first_path.pop(0)
+        #     print_8puzzle_state(n.state)
+        #     print(h_all[j].__name__, ' h = ', n.h, ' (cost incurred: ', n.cost, ')')
+        print('The path tends to be long, so we\'ll just say that the cost was ', best_first_path.pop().cost, '\n')
+        del(best_first_path)
 
         print('\n', 'starting A*, round ', i, 'with ', h_all[j].__name__)
         start = timer()
@@ -271,6 +283,7 @@ for j in range(len(h_all)):
             print_8puzzle_state(n.state)
             print(h_all[j].__name__, ' f(n) = ', n.h + n.cost,
                   ', where h = ', n.h, ', and cost = ', n.cost)
+        del(a_star_path)
 
 
 print('------------------------------ timers -----------------------------')

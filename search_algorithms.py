@@ -9,8 +9,8 @@
 # helper to avoid repeating code in each algorithm
 def expand_if(curr_node):
     # no children, generate 'em
-    if not curr_node.children:
-        curr_node.expand()
+    #if not curr_node.children:
+    curr_node.expand()
 
 
 # Depth-first search
