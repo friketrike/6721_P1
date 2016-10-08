@@ -11,6 +11,9 @@ class Problem:
         self.state_transitions = state_transitions
         self.h = h
 
+    def change_h(self, h):
+        self.h = h
+
 
 class Node:
     """"Problem node for search TODO fill in later"""
