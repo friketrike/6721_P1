@@ -1,8 +1,7 @@
-
 # Comp 6721 AI, Project 1, fall 2016
 # Federico O'Reilly Regueiro 40012304
 
-# Problem class
+# Problem and problem-nodes are contained here, mostly
 
 
 class Problem:

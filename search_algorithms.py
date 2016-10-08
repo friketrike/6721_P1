@@ -2,30 +2,30 @@
 # Federico O'Reilly Regueiro 40012304
 
 
+""""Different search algorithms for a given problem, they expand nodes and order
+    them appropriately in the open list"""
+
+
+# helper to avoid repeating code in each algorithm
 def expand_if(curr_node):
     # no children, generate 'em
     if not curr_node.children:
         curr_node.expand()
 
 
+# Depth-first search
 def dfs(curr_node, open_list, closed_list):
     expand_if(curr_node)
-    dfs.counter += 1
 
     # avoid including listed children redundantly in the open list (no infinite loops here)
-    # print('---', dfs.counter, ' ---\n', curr_node.state[0:3],
-    #       '\n', curr_node.state[3:6],
-    #       '\n', curr_node.state[6:9])
     for child in reversed(curr_node.children):
         if not (any(node.state == child.state for node in open_list) or
                 any(node.state == child.state for node in closed_list)):
             open_list.insert(0, child)
-            # print('\t', dfs.counter, child.state)
             child.parent = curr_node
 
-dfs.counter = 0
 
-
+# Breadth-first search
 def bfs(curr_node, open_list, closed_list):
     expand_if(curr_node)
 
@@ -37,6 +37,7 @@ def bfs(curr_node, open_list, closed_list):
             child.parent = curr_node
 
 
+# Good ol' greedy bfs
 def best_first(curr_node, open_list, closed_list):
     expand_if(curr_node)
 
@@ -48,6 +49,7 @@ def best_first(curr_node, open_list, closed_list):
             child.parent = curr_node
 
 
+# A* search
 def a_star(curr_node, open_list, closed_list):
     expand_if(curr_node)
 
