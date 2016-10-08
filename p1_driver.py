@@ -205,9 +205,11 @@ left_branch_start_state = [2, 3, 4,
 
 start_node = problem.Node(the_problem, left_branch_start_state)
 
+n_tests = 3
+
 dfs_times = []
 print('\n', 'starting DFS, forcing start state along left sub-tree, running 3 times')
-for i in range(3):
+for i in range(n_tests):
     start = timer()
     dfs_path = search_agent.find_goal(start_node, search_algorithms.dfs)
     end = timer()
@@ -220,7 +222,7 @@ print('DFS took ', dfs_times, ' respectively for 3 executions on a forced-optima
 
 bfs_times = []
 print('\n', 'starting bfs, forcing start state along left sub-tree, running 3 times')
-for i in range(3):
+for i in range(n_tests):
     start = timer()
     bfs_path = search_agent.find_goal(start_node, search_algorithms.bfs)
     end = timer()
@@ -233,16 +235,23 @@ print('BFS took ', dfs_times, ' respectively for 3 executions')
 
 # ------------- Heuristic searches, now try with random permutations --------
 
-rows, cols = len(h_all), 3
+# Randomly create 3 starting states to be tested with each heuristic
+start_states = []
+for i in range(n_tests):
+    start_state = rand_perm(goal_state, 10)
+    start_states.append(start_state)
+
+rows, cols = len(h_all), n_tests
 best_first_times = [[0 for x in range(cols)] for y in range(rows)]
 a_star_times = [[0 for x in range(cols)] for y in range(rows)]
 for j in range(len(h_all)):
     the_problem.change_h(h_all[j])
-    for i in range(3):
-        start_state = rand_perm(goal_state, 10)
-        start_node = problem.Node(the_problem, start_state)
+    for i in range(n_tests):
+        start_node = problem.Node(the_problem, start_states[i])
 
-        print('\n', 'starting Best First, round ', i, 'with ', h_all[j].__name__)
+        print('\n', 'starting Best First, round ', i, 'with ', h_all[j].__name__, ' initial configuration:')
+        print_8puzzle_state(start_states[i])
+        print('\n-----This might take a while-----\n')
         start = timer()
         best_first_path = search_agent.find_goal(start_node, search_algorithms.best_first)
         end = timer()
