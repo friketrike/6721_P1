@@ -70,7 +70,7 @@ def out_of_place(state):
     return h_s
 
 
-# Helper for manhattan distance and push_tiles heuritics, given two indices from
+# Helper for manhattan distance and push_tiles heuristics, given two indices from
 # a 3x3 grid, returns a list with the 2d vector we need to ad to the source to get
 # to the destination
 def manhattan_helper(idx_src, idx_dest):
@@ -211,7 +211,7 @@ trial = [{'runs': 3, 's': ', forcing start state along left sub-tree, running 3 
          {'runs': 1, 's': ''}]
 
 for j, start_state in enumerate(uninformed_start_states):
-    start_node = problem.Node(the_problem, start_state)
+    start_node = problem.Node(the_problem, start_state, 0, None, [])
 
     dfs_times = []
     print('\n', 'starting DFS', trial[j]['s'])
@@ -227,6 +227,8 @@ for j, start_state in enumerate(uninformed_start_states):
     print('DFS took ', dfs_times)
     del (dfs_path, dfs_times)
 
+    # start with a fresh node
+    start_node = problem.Node(the_problem, start_state, 0, None, [])
 
     bfs_times = []
     print('\n', 'starting bfs', trial[j]['s'])
@@ -248,7 +250,7 @@ for j, start_state in enumerate(uninformed_start_states):
 n_tests = 3
 start_states = []
 for i in range(n_tests):
-    start_state = rand_perm(goal_state, 100)
+    start_state = rand_perm(goal_state, 200)
     start_states.append(start_state)
 
 rows, cols = len(h_all), n_tests
@@ -257,11 +259,12 @@ a_star_times = [[0 for x in range(cols)] for y in range(rows)]
 for j in range(len(h_all)):
     the_problem.change_h(h_all[j])
     for i in range(n_tests):
-        start_node = problem.Node(the_problem, start_states[i])
+        start_node = problem.Node(the_problem, start_states[i], 0, None, [])
 
         print('\n', 'starting Best First, round ', i, 'with ', h_all[j].__name__, ' initial configuration:')
-        print_8puzzle_state(start_states[i])
+        print_8puzzle_state(start_node.state)
         print('\n-----This might take a while-----\n')
+        best_first_path = []
         start = timer()
         best_first_path = search_agent.find_goal(start_node, search_algorithms.best_first)
         end = timer()
@@ -271,9 +274,12 @@ for j in range(len(h_all)):
         #     print_8puzzle_state(n.state)
         #     print(h_all[j].__name__, ' h = ', n.h, ' (cost incurred: ', n.cost, ')')
         print('The path tends to be long, so we\'ll just say that the cost was ', best_first_path.pop().cost, '\n')
-        del(best_first_path)
+
+        # Start with a fresh node
+        start_node = problem.Node(the_problem, start_states[i], 0, None, [])
 
         print('\n', 'starting A*, round ', i, 'with ', h_all[j].__name__)
+        a_star_path = []
         start = timer()
         a_star_path = search_agent.find_goal(start_node, search_algorithms.a_star)
         end = timer()

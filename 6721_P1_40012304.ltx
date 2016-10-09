@@ -1,0 +1,77 @@
+\documentclass{article}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\begin{document}
+\title{Comp 6721 - Artificial Intelligence - Project 1 project report}
+\author{Federico O'Reilly Regueiro}
+\date{October 9th, 2016}
+\maketitle
+
+%------------------------ report - Intro ------------------------%
+\section{Intro}
+The present project touches on informed and uninformed search implementation and heuristics.
+The implementation was done in Python 3 consisting of 4 source files. A script implementing the particulars
+of the 8-puzzle and three general search files; a problem and problem-node file, a search-algorithms file and a
+generic search file.
+%------------------------ report - Uninformed searches ------------------------%
+\section{Uninformed search}
+\subsection{forced left-branch}
+For uninformed searches, which can take a very long time, firstly an initial state was implemented such that the goal state can be found taking the first left branch at every step (or by applying the first available state-transition). For this initial state REFERENCE, as can be expected, both bfs and dfs perform equally, finding a minimal path to the goal. We have timed the running time for both algorithms during three iterations to minimally weed-out system related discrepancies but the times are minimal and little to no information can be obtained from them.
+INCLUDE OUTPUT
+
+\subsection{random start state}
+Secondly, a random initial state was implemented by applying 10 CHECK random state transitions to the goal state. 
+This was done both to ensure proximity of the start and goal states in the state space and to ensure that the initial state can transition to the goal state, since half of the state space is inaccessible from the goal state.
+
+A single run of uninformed searches with a random start-state was performed, since dfs for some states can take well over an hour on the i5 available to the author. The results were conclusive regarding bothe the search time and the optimality of bfs. No memory benchmarking was performed, which could be a strong point in favor of dfs INCLUDE BigO SPACE. the comparison of strategies... INCLUDE RESULTS 
+
+we
+ 
+%------------------------  something ------------------------%
+\section{Heuristic search}
+For heuristic search, the three given heuristics: $h_{md}(s) = $ \texttt{manhattan\textunderscore \-distance(s)}, $h_{op}(s) = $ 
+\texttt{out\textunderscore \-of\textunderscore \-place(s)} and 
+$h_{min} = $  \texttt{min(h\textunderscore md(s), h\textunderscore op(s))},
+ were implemented. Additionally, both an inadmissible heuristic $h_{i}(s)$ and two admissible heuristics, 
+$h_{pt}(s) = $ \texttt{push\textunderscore tiles(s)} and $max(h_{pt}(s), h_{md}(s))$ were implemented
+ 
+$h_{pt}(s)$ consists of computing,  for each out\textunderscore of\textunderscore place tile,  the sum of manhattan 
+distances from the blank position to each one of the tiles that lie between each the out\textunderscore of \textunderscore 
+place tile and its goal position. once all displacement sums have been calculated, the maximum total sum for a given state is 
+chosen and all other out\textunderscore of\textunderscore place tiles add one per tile to the heuristic function of the given state.
+
+The rationale behind $h_{pt}(s)$ is that the tiles that lie between an out\textunderscore of\textunderscore place tile and its goal 
+position will need to move out of the way for the out\textunderscore of\textunderscore place tile to advance towards its goal. 
+Only onesuch sum of movements is chosen since in some cases, these movements might reduce the movements needed to take 
+other out\textunderscore of\textunderscore place tiles to their respective goal positions \textit{eg.}\texttt{[8, 1, 2, 7, 'B', 3, 6, 5, 4]}.
+
+Performance-wise, $h_{pt}(s)$ performs at least as well as $h_{op}(s)$ since they are equivalent in some limit
+ cases such as, again, 
+\texttt{[8, 1, 2, 7, 'B', 3, 6, 5, 4]} position but generally $h_{pt}(s)$ will yield higher values since it will grow at least $1$ for 
+every out\textunderscore of\textunderscore place tile.
+
+As an inadmissible heuristic, $h_{i}(s) = h_{op}(s) + h_{pt}(s)$ was chosen, yielding relatively good results but we can 
+observe that 
+FOR SOME A* SEARCH $f(s)$ is not characterized by monotonic growth. Namely, during the ITH step of the solution path, 
+$f(s)$ decreases from the prior step.
+
+
+\begin{center}
+\begin{tabular}{ c c }
+	\textbf{d} & \textbf{testing error}\\
+	\hline
+	1 & 0.350810\\
+	2 & 0.131584\\
+	3 & 0.125125\\
+	4 & 0.021239\\
+	5 & 0.021349\\
+	6 & 0.017636\\
+	7 & 0.018425\\
+	8 & 0.018583\\
+\end{tabular}
+\end{center}
+
+
+
+\end{document} 
