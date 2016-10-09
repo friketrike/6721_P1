@@ -203,7 +203,7 @@ left_branch_start_state = [2, 3, 4,
                            1, 8, 5,
                            7, 6, 'B']
 
-random_start_state = rand_perm(goal_state, 8)
+random_start_state = rand_perm(goal_state, 27)
 
 uninformed_start_states = [left_branch_start_state, random_start_state]
 
@@ -248,7 +248,7 @@ for j, start_state in enumerate(uninformed_start_states):
 n_tests = 3
 start_states = []
 for i in range(n_tests):
-    start_state = rand_perm(goal_state, 10)
+    start_state = rand_perm(goal_state, 100)
     start_states.append(start_state)
 
 rows, cols = len(h_all), n_tests
