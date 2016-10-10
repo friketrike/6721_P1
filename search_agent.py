@@ -4,7 +4,7 @@
 
 """"generic search algorithm taking nodes and an algorithm to traverse the
     problem space. The node itself should contain its own goal_test as per the
-    N0de class in the problem.m file"""
+    Node class in the problem.m file"""
 
 # Once we've found the goal, reconstruct a path leading to it from the start
 def set_path_to_goal(node):

@@ -1,0 +1,2890 @@
+# Comp 6721 AI, Project 1, fall 2016
+# Federico O'Reilly Regueiro 40012304
+
+________ Program Output for Comp6721 P1, fall 2016 ______________
+
+
+ starting DFS , forcing start state along left sub-tree, running 3 times
+The path tends to be long, so we'll just say that the cost was  6 
+
+DFS took  [0.0008811303414404392, 8.171610534191132e-05, 7.920106872916222e-05]
+
+ starting bfs , forcing start state along left sub-tree, running 3 times
+
+- - - - - - - - - -
+
+   2    3    4
+   1    8    5
+   7    6    B
+
+- - - - - - - - - -
+
+   2    3    4
+   1    8    B
+   7    6    5
+
+- - - - - - - - - -
+
+   2    3    B
+   1    8    4
+   7    6    5
+
+- - - - - - - - - -
+
+   2    B    3
+   1    8    4
+   7    6    5
+
+- - - - - - - - - -
+
+   B    2    3
+   1    8    4
+   7    6    5
+
+- - - - - - - - - -
+
+   1    2    3
+   B    8    4
+   7    6    5
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+
+BFS took  [0.006148000247776508, 0.0015477719716727734, 0.0015994571149349213]  with a cost of  6 
+
+
+ starting DFS 
+The path tends to be long, so we'll just say that the cost was  550 
+
+DFS took  [0.2341196183115244]
+
+ starting bfs 
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    5    B
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    B    5
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+
+BFS took  [0.0005259821191430092]  with a cost of  2 
+
+
+ starting Best First, round  0 with  out_of_place  initial configuration:
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  959 
+
+
+ starting A*, round  0 with  out_of_place
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+out_of_place  f(n) =  8 , where h =  8 , and cost =  0
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   B    3    6
+out_of_place  f(n) =  9 , where h =  8 , and cost =  1
+
+- - - - - - - - - -
+
+   7    8    1
+   B    4    2
+   5    3    6
+out_of_place  f(n) =  10 , where h =  8 , and cost =  2
+
+- - - - - - - - - -
+
+   B    8    1
+   7    4    2
+   5    3    6
+out_of_place  f(n) =  11 , where h =  8 , and cost =  3
+
+- - - - - - - - - -
+
+   8    B    1
+   7    4    2
+   5    3    6
+out_of_place  f(n) =  12 , where h =  8 , and cost =  4
+
+- - - - - - - - - -
+
+   8    1    B
+   7    4    2
+   5    3    6
+out_of_place  f(n) =  13 , where h =  8 , and cost =  5
+
+- - - - - - - - - -
+
+   8    1    2
+   7    4    B
+   5    3    6
+out_of_place  f(n) =  14 , where h =  8 , and cost =  6
+
+- - - - - - - - - -
+
+   8    1    2
+   7    B    4
+   5    3    6
+out_of_place  f(n) =  14 , where h =  7 , and cost =  7
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    4
+   5    B    6
+out_of_place  f(n) =  15 , where h =  7 , and cost =  8
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    4
+   5    6    B
+out_of_place  f(n) =  15 , where h =  6 , and cost =  9
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    B
+   5    6    4
+out_of_place  f(n) =  17 , where h =  7 , and cost =  10
+
+- - - - - - - - - -
+
+   8    1    2
+   7    B    3
+   5    6    4
+out_of_place  f(n) =  18 , where h =  7 , and cost =  11
+
+- - - - - - - - - -
+
+   8    1    2
+   7    6    3
+   5    B    4
+out_of_place  f(n) =  20 , where h =  8 , and cost =  12
+
+- - - - - - - - - -
+
+   8    1    2
+   7    6    3
+   B    5    4
+out_of_place  f(n) =  21 , where h =  8 , and cost =  13
+
+- - - - - - - - - -
+
+   8    1    2
+   B    6    3
+   7    5    4
+out_of_place  f(n) =  21 , where h =  7 , and cost =  14
+
+- - - - - - - - - -
+
+   B    1    2
+   8    6    3
+   7    5    4
+out_of_place  f(n) =  21 , where h =  6 , and cost =  15
+
+- - - - - - - - - -
+
+   1    B    2
+   8    6    3
+   7    5    4
+out_of_place  f(n) =  21 , where h =  5 , and cost =  16
+
+- - - - - - - - - -
+
+   1    2    B
+   8    6    3
+   7    5    4
+out_of_place  f(n) =  21 , where h =  4 , and cost =  17
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    B
+   7    5    4
+out_of_place  f(n) =  21 , where h =  3 , and cost =  18
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    5    B
+out_of_place  f(n) =  21 , where h =  2 , and cost =  19
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    B    5
+out_of_place  f(n) =  21 , where h =  1 , and cost =  20
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+out_of_place  f(n) =  21 , where h =  0 , and cost =  21
+
+ starting Best First, round  1 with  out_of_place  initial configuration:
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  700 
+
+
+ starting A*, round  1 with  out_of_place
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+out_of_place  f(n) =  8 , where h =  8 , and cost =  0
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    B
+   8    7    2
+out_of_place  f(n) =  9 , where h =  8 , and cost =  1
+
+- - - - - - - - - -
+
+   3    5    1
+   6    B    4
+   8    7    2
+out_of_place  f(n) =  9 , where h =  7 , and cost =  2
+
+- - - - - - - - - -
+
+   3    5    1
+   B    6    4
+   8    7    2
+out_of_place  f(n) =  10 , where h =  7 , and cost =  3
+
+- - - - - - - - - -
+
+   B    5    1
+   3    6    4
+   8    7    2
+out_of_place  f(n) =  11 , where h =  7 , and cost =  4
+
+- - - - - - - - - -
+
+   5    B    1
+   3    6    4
+   8    7    2
+out_of_place  f(n) =  12 , where h =  7 , and cost =  5
+
+- - - - - - - - - -
+
+   5    1    B
+   3    6    4
+   8    7    2
+out_of_place  f(n) =  13 , where h =  7 , and cost =  6
+
+- - - - - - - - - -
+
+   5    1    4
+   3    6    B
+   8    7    2
+out_of_place  f(n) =  15 , where h =  8 , and cost =  7
+
+- - - - - - - - - -
+
+   5    1    4
+   3    B    6
+   8    7    2
+out_of_place  f(n) =  16 , where h =  8 , and cost =  8
+
+- - - - - - - - - -
+
+   5    1    4
+   B    3    6
+   8    7    2
+out_of_place  f(n) =  17 , where h =  8 , and cost =  9
+
+- - - - - - - - - -
+
+   B    1    4
+   5    3    6
+   8    7    2
+out_of_place  f(n) =  18 , where h =  8 , and cost =  10
+
+- - - - - - - - - -
+
+   1    B    4
+   5    3    6
+   8    7    2
+out_of_place  f(n) =  18 , where h =  7 , and cost =  11
+
+- - - - - - - - - -
+
+   1    3    4
+   5    B    6
+   8    7    2
+out_of_place  f(n) =  19 , where h =  7 , and cost =  12
+
+- - - - - - - - - -
+
+   1    3    4
+   B    5    6
+   8    7    2
+out_of_place  f(n) =  20 , where h =  7 , and cost =  13
+
+- - - - - - - - - -
+
+   1    3    4
+   8    5    6
+   B    7    2
+out_of_place  f(n) =  20 , where h =  6 , and cost =  14
+
+- - - - - - - - - -
+
+   1    3    4
+   8    5    6
+   7    B    2
+out_of_place  f(n) =  20 , where h =  5 , and cost =  15
+
+- - - - - - - - - -
+
+   1    3    4
+   8    B    6
+   7    5    2
+out_of_place  f(n) =  21 , where h =  5 , and cost =  16
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    B
+   7    5    2
+out_of_place  f(n) =  22 , where h =  5 , and cost =  17
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    2
+   7    5    B
+out_of_place  f(n) =  23 , where h =  5 , and cost =  18
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    2
+   7    B    5
+out_of_place  f(n) =  23 , where h =  4 , and cost =  19
+
+- - - - - - - - - -
+
+   1    3    4
+   8    B    2
+   7    6    5
+out_of_place  f(n) =  23 , where h =  3 , and cost =  20
+
+- - - - - - - - - -
+
+   1    3    4
+   8    2    B
+   7    6    5
+out_of_place  f(n) =  24 , where h =  3 , and cost =  21
+
+- - - - - - - - - -
+
+   1    3    B
+   8    2    4
+   7    6    5
+out_of_place  f(n) =  24 , where h =  2 , and cost =  22
+
+- - - - - - - - - -
+
+   1    B    3
+   8    2    4
+   7    6    5
+out_of_place  f(n) =  24 , where h =  1 , and cost =  23
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+out_of_place  f(n) =  24 , where h =  0 , and cost =  24
+
+ starting Best First, round  2 with  out_of_place  initial configuration:
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  166 
+
+
+ starting A*, round  2 with  out_of_place
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+out_of_place  f(n) =  5 , where h =  5 , and cost =  0
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    B
+   7    5    3
+out_of_place  f(n) =  6 , where h =  5 , and cost =  1
+
+- - - - - - - - - -
+
+   1    6    4
+   8    B    2
+   7    5    3
+out_of_place  f(n) =  7 , where h =  5 , and cost =  2
+
+- - - - - - - - - -
+
+   1    B    4
+   8    6    2
+   7    5    3
+out_of_place  f(n) =  8 , where h =  5 , and cost =  3
+
+- - - - - - - - - -
+
+   1    4    B
+   8    6    2
+   7    5    3
+out_of_place  f(n) =  9 , where h =  5 , and cost =  4
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    B
+   7    5    3
+out_of_place  f(n) =  10 , where h =  5 , and cost =  5
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    5    B
+out_of_place  f(n) =  11 , where h =  5 , and cost =  6
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    B    5
+out_of_place  f(n) =  11 , where h =  4 , and cost =  7
+
+- - - - - - - - - -
+
+   1    4    2
+   8    B    3
+   7    6    5
+out_of_place  f(n) =  11 , where h =  3 , and cost =  8
+
+- - - - - - - - - -
+
+   1    B    2
+   8    4    3
+   7    6    5
+out_of_place  f(n) =  12 , where h =  3 , and cost =  9
+
+- - - - - - - - - -
+
+   1    2    B
+   8    4    3
+   7    6    5
+out_of_place  f(n) =  12 , where h =  2 , and cost =  10
+
+- - - - - - - - - -
+
+   1    2    3
+   8    4    B
+   7    6    5
+out_of_place  f(n) =  12 , where h =  1 , and cost =  11
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+out_of_place  f(n) =  12 , where h =  0 , and cost =  12
+
+ starting Best First, round  0 with  manhattan  initial configuration:
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  591 
+
+
+ starting A*, round  0 with  manhattan
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+manhattan  f(n) =  10 , where h =  10 , and cost =  0
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   B    3    6
+manhattan  f(n) =  10 , where h =  9 , and cost =  1
+
+- - - - - - - - - -
+
+   7    8    1
+   B    4    2
+   5    3    6
+manhattan  f(n) =  11 , where h =  9 , and cost =  2
+
+- - - - - - - - - -
+
+   B    8    1
+   7    4    2
+   5    3    6
+manhattan  f(n) =  12 , where h =  9 , and cost =  3
+
+- - - - - - - - - -
+
+   8    B    1
+   7    4    2
+   5    3    6
+manhattan  f(n) =  12 , where h =  8 , and cost =  4
+
+- - - - - - - - - -
+
+   8    1    B
+   7    4    2
+   5    3    6
+manhattan  f(n) =  12 , where h =  7 , and cost =  5
+
+- - - - - - - - - -
+
+   8    1    2
+   7    4    B
+   5    3    6
+manhattan  f(n) =  13 , where h =  7 , and cost =  6
+
+- - - - - - - - - -
+
+   8    1    2
+   7    B    4
+   5    3    6
+manhattan  f(n) =  13 , where h =  6 , and cost =  7
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    4
+   5    B    6
+manhattan  f(n) =  14 , where h =  6 , and cost =  8
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    4
+   5    6    B
+manhattan  f(n) =  14 , where h =  5 , and cost =  9
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    B
+   5    6    4
+manhattan  f(n) =  15 , where h =  5 , and cost =  10
+
+- - - - - - - - - -
+
+   8    1    2
+   7    B    3
+   5    6    4
+manhattan  f(n) =  15 , where h =  4 , and cost =  11
+
+- - - - - - - - - -
+
+   8    1    2
+   7    6    3
+   5    B    4
+manhattan  f(n) =  16 , where h =  4 , and cost =  12
+
+- - - - - - - - - -
+
+   8    1    2
+   7    6    3
+   B    5    4
+manhattan  f(n) =  16 , where h =  3 , and cost =  13
+
+- - - - - - - - - -
+
+   8    1    2
+   B    6    3
+   7    5    4
+manhattan  f(n) =  17 , where h =  3 , and cost =  14
+
+- - - - - - - - - -
+
+   B    1    2
+   8    6    3
+   7    5    4
+manhattan  f(n) =  18 , where h =  3 , and cost =  15
+
+- - - - - - - - - -
+
+   1    B    2
+   8    6    3
+   7    5    4
+manhattan  f(n) =  18 , where h =  2 , and cost =  16
+
+- - - - - - - - - -
+
+   1    2    B
+   8    6    3
+   7    5    4
+manhattan  f(n) =  18 , where h =  1 , and cost =  17
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    B
+   7    5    4
+manhattan  f(n) =  19 , where h =  1 , and cost =  18
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    5    B
+manhattan  f(n) =  20 , where h =  1 , and cost =  19
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    B    5
+manhattan  f(n) =  20 , where h =  0 , and cost =  20
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+manhattan  f(n) =  21 , where h =  0 , and cost =  21
+
+ starting Best First, round  1 with  manhattan  initial configuration:
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  364 
+
+
+ starting A*, round  1 with  manhattan
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+manhattan  f(n) =  9 , where h =  9 , and cost =  0
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    B    7
+manhattan  f(n) =  11 , where h =  10 , and cost =  1
+
+- - - - - - - - - -
+
+   3    5    1
+   6    B    2
+   8    4    7
+manhattan  f(n) =  12 , where h =  10 , and cost =  2
+
+- - - - - - - - - -
+
+   3    5    1
+   6    2    B
+   8    4    7
+manhattan  f(n) =  12 , where h =  9 , and cost =  3
+
+- - - - - - - - - -
+
+   3    5    B
+   6    2    1
+   8    4    7
+manhattan  f(n) =  13 , where h =  9 , and cost =  4
+
+- - - - - - - - - -
+
+   3    B    5
+   6    2    1
+   8    4    7
+manhattan  f(n) =  13 , where h =  8 , and cost =  5
+
+- - - - - - - - - -
+
+   B    3    5
+   6    2    1
+   8    4    7
+manhattan  f(n) =  13 , where h =  7 , and cost =  6
+
+- - - - - - - - - -
+
+   6    3    5
+   B    2    1
+   8    4    7
+manhattan  f(n) =  14 , where h =  7 , and cost =  7
+
+- - - - - - - - - -
+
+   6    3    5
+   2    B    1
+   8    4    7
+manhattan  f(n) =  16 , where h =  8 , and cost =  8
+
+- - - - - - - - - -
+
+   6    3    5
+   2    1    B
+   8    4    7
+manhattan  f(n) =  16 , where h =  7 , and cost =  9
+
+- - - - - - - - - -
+
+   6    3    B
+   2    1    5
+   8    4    7
+manhattan  f(n) =  17 , where h =  7 , and cost =  10
+
+- - - - - - - - - -
+
+   6    B    3
+   2    1    5
+   8    4    7
+manhattan  f(n) =  17 , where h =  6 , and cost =  11
+
+- - - - - - - - - -
+
+   B    6    3
+   2    1    5
+   8    4    7
+manhattan  f(n) =  17 , where h =  5 , and cost =  12
+
+- - - - - - - - - -
+
+   2    6    3
+   B    1    5
+   8    4    7
+manhattan  f(n) =  18 , where h =  5 , and cost =  13
+
+- - - - - - - - - -
+
+   2    6    3
+   1    B    5
+   8    4    7
+manhattan  f(n) =  18 , where h =  4 , and cost =  14
+
+- - - - - - - - - -
+
+   2    6    3
+   1    4    5
+   8    B    7
+manhattan  f(n) =  19 , where h =  4 , and cost =  15
+
+- - - - - - - - - -
+
+   2    6    3
+   1    4    5
+   8    7    B
+manhattan  f(n) =  19 , where h =  3 , and cost =  16
+
+- - - - - - - - - -
+
+   2    6    3
+   1    4    B
+   8    7    5
+manhattan  f(n) =  20 , where h =  3 , and cost =  17
+
+- - - - - - - - - -
+
+   2    6    3
+   1    B    4
+   8    7    5
+manhattan  f(n) =  20 , where h =  2 , and cost =  18
+
+- - - - - - - - - -
+
+   2    B    3
+   1    6    4
+   8    7    5
+manhattan  f(n) =  21 , where h =  2 , and cost =  19
+
+- - - - - - - - - -
+
+   B    2    3
+   1    6    4
+   8    7    5
+manhattan  f(n) =  21 , where h =  1 , and cost =  20
+
+- - - - - - - - - -
+
+   1    2    3
+   B    6    4
+   8    7    5
+manhattan  f(n) =  22 , where h =  1 , and cost =  21
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   B    7    5
+manhattan  f(n) =  23 , where h =  1 , and cost =  22
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    B    5
+manhattan  f(n) =  23 , where h =  0 , and cost =  23
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+manhattan  f(n) =  24 , where h =  0 , and cost =  24
+
+ starting Best First, round  2 with  manhattan  initial configuration:
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  118 
+
+
+ starting A*, round  2 with  manhattan
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+manhattan  f(n) =  1 , where h =  1 , and cost =  0
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    B
+   7    5    3
+manhattan  f(n) =  2 , where h =  1 , and cost =  1
+
+- - - - - - - - - -
+
+   1    6    4
+   8    B    2
+   7    5    3
+manhattan  f(n) =  4 , where h =  2 , and cost =  2
+
+- - - - - - - - - -
+
+   1    B    4
+   8    6    2
+   7    5    3
+manhattan  f(n) =  5 , where h =  2 , and cost =  3
+
+- - - - - - - - - -
+
+   1    4    B
+   8    6    2
+   7    5    3
+manhattan  f(n) =  7 , where h =  3 , and cost =  4
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    B
+   7    5    3
+manhattan  f(n) =  8 , where h =  3 , and cost =  5
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    5    B
+manhattan  f(n) =  9 , where h =  3 , and cost =  6
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    B    5
+manhattan  f(n) =  9 , where h =  2 , and cost =  7
+
+- - - - - - - - - -
+
+   1    4    2
+   8    B    3
+   7    6    5
+manhattan  f(n) =  10 , where h =  2 , and cost =  8
+
+- - - - - - - - - -
+
+   1    B    2
+   8    4    3
+   7    6    5
+manhattan  f(n) =  11 , where h =  2 , and cost =  9
+
+- - - - - - - - - -
+
+   1    2    B
+   8    4    3
+   7    6    5
+manhattan  f(n) =  11 , where h =  1 , and cost =  10
+
+- - - - - - - - - -
+
+   1    2    3
+   8    4    B
+   7    6    5
+manhattan  f(n) =  12 , where h =  1 , and cost =  11
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+manhattan  f(n) =  12 , where h =  0 , and cost =  12
+
+ starting Best First, round  0 with  min_manhattan_out_of_place  initial configuration:
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  2801 
+
+
+ starting A*, round  0 with  min_manhattan_out_of_place
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+min_manhattan_out_of_place  f(n) =  8 , where h =  8 , and cost =  0
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   B    3    6
+min_manhattan_out_of_place  f(n) =  9 , where h =  8 , and cost =  1
+
+- - - - - - - - - -
+
+   7    8    1
+   B    4    2
+   5    3    6
+min_manhattan_out_of_place  f(n) =  10 , where h =  8 , and cost =  2
+
+- - - - - - - - - -
+
+   B    8    1
+   7    4    2
+   5    3    6
+min_manhattan_out_of_place  f(n) =  11 , where h =  8 , and cost =  3
+
+- - - - - - - - - -
+
+   8    B    1
+   7    4    2
+   5    3    6
+min_manhattan_out_of_place  f(n) =  12 , where h =  8 , and cost =  4
+
+- - - - - - - - - -
+
+   8    1    B
+   7    4    2
+   5    3    6
+min_manhattan_out_of_place  f(n) =  12 , where h =  7 , and cost =  5
+
+- - - - - - - - - -
+
+   8    1    2
+   7    4    B
+   5    3    6
+min_manhattan_out_of_place  f(n) =  13 , where h =  7 , and cost =  6
+
+- - - - - - - - - -
+
+   8    1    2
+   7    B    4
+   5    3    6
+min_manhattan_out_of_place  f(n) =  13 , where h =  6 , and cost =  7
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    4
+   5    B    6
+min_manhattan_out_of_place  f(n) =  14 , where h =  6 , and cost =  8
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    4
+   5    6    B
+min_manhattan_out_of_place  f(n) =  14 , where h =  5 , and cost =  9
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    B
+   5    6    4
+min_manhattan_out_of_place  f(n) =  15 , where h =  5 , and cost =  10
+
+- - - - - - - - - -
+
+   8    1    2
+   7    B    3
+   5    6    4
+min_manhattan_out_of_place  f(n) =  15 , where h =  4 , and cost =  11
+
+- - - - - - - - - -
+
+   8    1    2
+   7    6    3
+   5    B    4
+min_manhattan_out_of_place  f(n) =  16 , where h =  4 , and cost =  12
+
+- - - - - - - - - -
+
+   8    1    2
+   7    6    3
+   B    5    4
+min_manhattan_out_of_place  f(n) =  16 , where h =  3 , and cost =  13
+
+- - - - - - - - - -
+
+   8    1    2
+   B    6    3
+   7    5    4
+min_manhattan_out_of_place  f(n) =  17 , where h =  3 , and cost =  14
+
+- - - - - - - - - -
+
+   B    1    2
+   8    6    3
+   7    5    4
+min_manhattan_out_of_place  f(n) =  18 , where h =  3 , and cost =  15
+
+- - - - - - - - - -
+
+   1    B    2
+   8    6    3
+   7    5    4
+min_manhattan_out_of_place  f(n) =  18 , where h =  2 , and cost =  16
+
+- - - - - - - - - -
+
+   1    2    B
+   8    6    3
+   7    5    4
+min_manhattan_out_of_place  f(n) =  18 , where h =  1 , and cost =  17
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    B
+   7    5    4
+min_manhattan_out_of_place  f(n) =  19 , where h =  1 , and cost =  18
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    5    B
+min_manhattan_out_of_place  f(n) =  20 , where h =  1 , and cost =  19
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    B    5
+min_manhattan_out_of_place  f(n) =  20 , where h =  0 , and cost =  20
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+min_manhattan_out_of_place  f(n) =  21 , where h =  0 , and cost =  21
+
+ starting Best First, round  1 with  min_manhattan_out_of_place  initial configuration:
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  318 
+
+
+ starting A*, round  1 with  min_manhattan_out_of_place
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+min_manhattan_out_of_place  f(n) =  8 , where h =  8 , and cost =  0
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    B    7
+min_manhattan_out_of_place  f(n) =  9 , where h =  8 , and cost =  1
+
+- - - - - - - - - -
+
+   3    5    1
+   6    B    2
+   8    4    7
+min_manhattan_out_of_place  f(n) =  10 , where h =  8 , and cost =  2
+
+- - - - - - - - - -
+
+   3    5    1
+   6    2    B
+   8    4    7
+min_manhattan_out_of_place  f(n) =  11 , where h =  8 , and cost =  3
+
+- - - - - - - - - -
+
+   3    5    B
+   6    2    1
+   8    4    7
+min_manhattan_out_of_place  f(n) =  12 , where h =  8 , and cost =  4
+
+- - - - - - - - - -
+
+   3    B    5
+   6    2    1
+   8    4    7
+min_manhattan_out_of_place  f(n) =  13 , where h =  8 , and cost =  5
+
+- - - - - - - - - -
+
+   B    3    5
+   6    2    1
+   8    4    7
+min_manhattan_out_of_place  f(n) =  13 , where h =  7 , and cost =  6
+
+- - - - - - - - - -
+
+   6    3    5
+   B    2    1
+   8    4    7
+min_manhattan_out_of_place  f(n) =  14 , where h =  7 , and cost =  7
+
+- - - - - - - - - -
+
+   6    3    5
+   2    B    1
+   8    4    7
+min_manhattan_out_of_place  f(n) =  16 , where h =  8 , and cost =  8
+
+- - - - - - - - - -
+
+   6    3    5
+   2    1    B
+   8    4    7
+min_manhattan_out_of_place  f(n) =  16 , where h =  7 , and cost =  9
+
+- - - - - - - - - -
+
+   6    3    B
+   2    1    5
+   8    4    7
+min_manhattan_out_of_place  f(n) =  17 , where h =  7 , and cost =  10
+
+- - - - - - - - - -
+
+   6    B    3
+   2    1    5
+   8    4    7
+min_manhattan_out_of_place  f(n) =  17 , where h =  6 , and cost =  11
+
+- - - - - - - - - -
+
+   B    6    3
+   2    1    5
+   8    4    7
+min_manhattan_out_of_place  f(n) =  17 , where h =  5 , and cost =  12
+
+- - - - - - - - - -
+
+   2    6    3
+   B    1    5
+   8    4    7
+min_manhattan_out_of_place  f(n) =  18 , where h =  5 , and cost =  13
+
+- - - - - - - - - -
+
+   2    6    3
+   1    B    5
+   8    4    7
+min_manhattan_out_of_place  f(n) =  18 , where h =  4 , and cost =  14
+
+- - - - - - - - - -
+
+   2    6    3
+   1    4    5
+   8    B    7
+min_manhattan_out_of_place  f(n) =  19 , where h =  4 , and cost =  15
+
+- - - - - - - - - -
+
+   2    6    3
+   1    4    5
+   8    7    B
+min_manhattan_out_of_place  f(n) =  19 , where h =  3 , and cost =  16
+
+- - - - - - - - - -
+
+   2    6    3
+   1    4    B
+   8    7    5
+min_manhattan_out_of_place  f(n) =  20 , where h =  3 , and cost =  17
+
+- - - - - - - - - -
+
+   2    6    3
+   1    B    4
+   8    7    5
+min_manhattan_out_of_place  f(n) =  20 , where h =  2 , and cost =  18
+
+- - - - - - - - - -
+
+   2    B    3
+   1    6    4
+   8    7    5
+min_manhattan_out_of_place  f(n) =  21 , where h =  2 , and cost =  19
+
+- - - - - - - - - -
+
+   B    2    3
+   1    6    4
+   8    7    5
+min_manhattan_out_of_place  f(n) =  21 , where h =  1 , and cost =  20
+
+- - - - - - - - - -
+
+   1    2    3
+   B    6    4
+   8    7    5
+min_manhattan_out_of_place  f(n) =  22 , where h =  1 , and cost =  21
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   B    7    5
+min_manhattan_out_of_place  f(n) =  23 , where h =  1 , and cost =  22
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    B    5
+min_manhattan_out_of_place  f(n) =  23 , where h =  0 , and cost =  23
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+min_manhattan_out_of_place  f(n) =  24 , where h =  0 , and cost =  24
+
+ starting Best First, round  2 with  min_manhattan_out_of_place  initial configuration:
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  118 
+
+
+ starting A*, round  2 with  min_manhattan_out_of_place
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+min_manhattan_out_of_place  f(n) =  1 , where h =  1 , and cost =  0
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    B
+   7    5    3
+min_manhattan_out_of_place  f(n) =  2 , where h =  1 , and cost =  1
+
+- - - - - - - - - -
+
+   1    6    4
+   8    B    2
+   7    5    3
+min_manhattan_out_of_place  f(n) =  4 , where h =  2 , and cost =  2
+
+- - - - - - - - - -
+
+   1    B    4
+   8    6    2
+   7    5    3
+min_manhattan_out_of_place  f(n) =  5 , where h =  2 , and cost =  3
+
+- - - - - - - - - -
+
+   1    4    B
+   8    6    2
+   7    5    3
+min_manhattan_out_of_place  f(n) =  7 , where h =  3 , and cost =  4
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    B
+   7    5    3
+min_manhattan_out_of_place  f(n) =  8 , where h =  3 , and cost =  5
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    5    B
+min_manhattan_out_of_place  f(n) =  9 , where h =  3 , and cost =  6
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    B    5
+min_manhattan_out_of_place  f(n) =  9 , where h =  2 , and cost =  7
+
+- - - - - - - - - -
+
+   1    4    2
+   8    B    3
+   7    6    5
+min_manhattan_out_of_place  f(n) =  10 , where h =  2 , and cost =  8
+
+- - - - - - - - - -
+
+   1    B    2
+   8    4    3
+   7    6    5
+min_manhattan_out_of_place  f(n) =  11 , where h =  2 , and cost =  9
+
+- - - - - - - - - -
+
+   1    2    B
+   8    4    3
+   7    6    5
+min_manhattan_out_of_place  f(n) =  11 , where h =  1 , and cost =  10
+
+- - - - - - - - - -
+
+   1    2    3
+   8    4    B
+   7    6    5
+min_manhattan_out_of_place  f(n) =  12 , where h =  1 , and cost =  11
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+min_manhattan_out_of_place  f(n) =  12 , where h =  0 , and cost =  12
+
+ starting Best First, round  0 with  push_tiles  initial configuration:
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  959 
+
+
+ starting A*, round  0 with  push_tiles
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+push_tiles  f(n) =  8 , where h =  8 , and cost =  0
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   B    3    6
+push_tiles  f(n) =  9 , where h =  8 , and cost =  1
+
+- - - - - - - - - -
+
+   7    8    1
+   B    4    2
+   5    3    6
+push_tiles  f(n) =  10 , where h =  8 , and cost =  2
+
+- - - - - - - - - -
+
+   B    8    1
+   7    4    2
+   5    3    6
+push_tiles  f(n) =  11 , where h =  8 , and cost =  3
+
+- - - - - - - - - -
+
+   8    B    1
+   7    4    2
+   5    3    6
+push_tiles  f(n) =  12 , where h =  8 , and cost =  4
+
+- - - - - - - - - -
+
+   8    1    B
+   7    4    2
+   5    3    6
+push_tiles  f(n) =  13 , where h =  8 , and cost =  5
+
+- - - - - - - - - -
+
+   8    1    2
+   7    4    B
+   5    3    6
+push_tiles  f(n) =  14 , where h =  8 , and cost =  6
+
+- - - - - - - - - -
+
+   8    1    2
+   7    B    4
+   5    3    6
+push_tiles  f(n) =  14 , where h =  7 , and cost =  7
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    4
+   5    B    6
+push_tiles  f(n) =  15 , where h =  7 , and cost =  8
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    4
+   5    6    B
+push_tiles  f(n) =  15 , where h =  6 , and cost =  9
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    B
+   5    6    4
+push_tiles  f(n) =  17 , where h =  7 , and cost =  10
+
+- - - - - - - - - -
+
+   8    1    2
+   7    B    3
+   5    6    4
+push_tiles  f(n) =  18 , where h =  7 , and cost =  11
+
+- - - - - - - - - -
+
+   8    1    2
+   7    6    3
+   5    B    4
+push_tiles  f(n) =  20 , where h =  8 , and cost =  12
+
+- - - - - - - - - -
+
+   8    1    2
+   7    6    3
+   B    5    4
+push_tiles  f(n) =  21 , where h =  8 , and cost =  13
+
+- - - - - - - - - -
+
+   8    1    2
+   B    6    3
+   7    5    4
+push_tiles  f(n) =  21 , where h =  7 , and cost =  14
+
+- - - - - - - - - -
+
+   B    1    2
+   8    6    3
+   7    5    4
+push_tiles  f(n) =  21 , where h =  6 , and cost =  15
+
+- - - - - - - - - -
+
+   1    B    2
+   8    6    3
+   7    5    4
+push_tiles  f(n) =  21 , where h =  5 , and cost =  16
+
+- - - - - - - - - -
+
+   1    2    B
+   8    6    3
+   7    5    4
+push_tiles  f(n) =  21 , where h =  4 , and cost =  17
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    B
+   7    5    4
+push_tiles  f(n) =  21 , where h =  3 , and cost =  18
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    5    B
+push_tiles  f(n) =  21 , where h =  2 , and cost =  19
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    B    5
+push_tiles  f(n) =  21 , where h =  1 , and cost =  20
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+push_tiles  f(n) =  21 , where h =  0 , and cost =  21
+
+ starting Best First, round  1 with  push_tiles  initial configuration:
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  700 
+
+
+ starting A*, round  1 with  push_tiles
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+push_tiles  f(n) =  8 , where h =  8 , and cost =  0
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    B
+   8    7    2
+push_tiles  f(n) =  9 , where h =  8 , and cost =  1
+
+- - - - - - - - - -
+
+   3    5    1
+   6    B    4
+   8    7    2
+push_tiles  f(n) =  9 , where h =  7 , and cost =  2
+
+- - - - - - - - - -
+
+   3    5    1
+   B    6    4
+   8    7    2
+push_tiles  f(n) =  10 , where h =  7 , and cost =  3
+
+- - - - - - - - - -
+
+   B    5    1
+   3    6    4
+   8    7    2
+push_tiles  f(n) =  11 , where h =  7 , and cost =  4
+
+- - - - - - - - - -
+
+   5    B    1
+   3    6    4
+   8    7    2
+push_tiles  f(n) =  12 , where h =  7 , and cost =  5
+
+- - - - - - - - - -
+
+   5    1    B
+   3    6    4
+   8    7    2
+push_tiles  f(n) =  13 , where h =  7 , and cost =  6
+
+- - - - - - - - - -
+
+   5    1    4
+   3    6    B
+   8    7    2
+push_tiles  f(n) =  15 , where h =  8 , and cost =  7
+
+- - - - - - - - - -
+
+   5    1    4
+   3    B    6
+   8    7    2
+push_tiles  f(n) =  16 , where h =  8 , and cost =  8
+
+- - - - - - - - - -
+
+   5    1    4
+   B    3    6
+   8    7    2
+push_tiles  f(n) =  17 , where h =  8 , and cost =  9
+
+- - - - - - - - - -
+
+   B    1    4
+   5    3    6
+   8    7    2
+push_tiles  f(n) =  18 , where h =  8 , and cost =  10
+
+- - - - - - - - - -
+
+   1    B    4
+   5    3    6
+   8    7    2
+push_tiles  f(n) =  18 , where h =  7 , and cost =  11
+
+- - - - - - - - - -
+
+   1    3    4
+   5    B    6
+   8    7    2
+push_tiles  f(n) =  19 , where h =  7 , and cost =  12
+
+- - - - - - - - - -
+
+   1    3    4
+   B    5    6
+   8    7    2
+push_tiles  f(n) =  20 , where h =  7 , and cost =  13
+
+- - - - - - - - - -
+
+   1    3    4
+   8    5    6
+   B    7    2
+push_tiles  f(n) =  20 , where h =  6 , and cost =  14
+
+- - - - - - - - - -
+
+   1    3    4
+   8    5    6
+   7    B    2
+push_tiles  f(n) =  20 , where h =  5 , and cost =  15
+
+- - - - - - - - - -
+
+   1    3    4
+   8    B    6
+   7    5    2
+push_tiles  f(n) =  21 , where h =  5 , and cost =  16
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    B
+   7    5    2
+push_tiles  f(n) =  22 , where h =  5 , and cost =  17
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    2
+   7    5    B
+push_tiles  f(n) =  23 , where h =  5 , and cost =  18
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    2
+   7    B    5
+push_tiles  f(n) =  23 , where h =  4 , and cost =  19
+
+- - - - - - - - - -
+
+   1    3    4
+   8    B    2
+   7    6    5
+push_tiles  f(n) =  23 , where h =  3 , and cost =  20
+
+- - - - - - - - - -
+
+   1    3    4
+   8    2    B
+   7    6    5
+push_tiles  f(n) =  24 , where h =  3 , and cost =  21
+
+- - - - - - - - - -
+
+   1    3    B
+   8    2    4
+   7    6    5
+push_tiles  f(n) =  24 , where h =  2 , and cost =  22
+
+- - - - - - - - - -
+
+   1    B    3
+   8    2    4
+   7    6    5
+push_tiles  f(n) =  24 , where h =  1 , and cost =  23
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+push_tiles  f(n) =  24 , where h =  0 , and cost =  24
+
+ starting Best First, round  2 with  push_tiles  initial configuration:
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  166 
+
+
+ starting A*, round  2 with  push_tiles
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+push_tiles  f(n) =  5 , where h =  5 , and cost =  0
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    B
+   7    5    3
+push_tiles  f(n) =  6 , where h =  5 , and cost =  1
+
+- - - - - - - - - -
+
+   1    6    4
+   8    B    2
+   7    5    3
+push_tiles  f(n) =  7 , where h =  5 , and cost =  2
+
+- - - - - - - - - -
+
+   1    B    4
+   8    6    2
+   7    5    3
+push_tiles  f(n) =  8 , where h =  5 , and cost =  3
+
+- - - - - - - - - -
+
+   1    4    B
+   8    6    2
+   7    5    3
+push_tiles  f(n) =  9 , where h =  5 , and cost =  4
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    B
+   7    5    3
+push_tiles  f(n) =  10 , where h =  5 , and cost =  5
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    5    B
+push_tiles  f(n) =  11 , where h =  5 , and cost =  6
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    B    5
+push_tiles  f(n) =  11 , where h =  4 , and cost =  7
+
+- - - - - - - - - -
+
+   1    4    2
+   8    B    3
+   7    6    5
+push_tiles  f(n) =  11 , where h =  3 , and cost =  8
+
+- - - - - - - - - -
+
+   1    B    2
+   8    4    3
+   7    6    5
+push_tiles  f(n) =  12 , where h =  3 , and cost =  9
+
+- - - - - - - - - -
+
+   1    2    B
+   8    4    3
+   7    6    5
+push_tiles  f(n) =  12 , where h =  2 , and cost =  10
+
+- - - - - - - - - -
+
+   1    2    3
+   8    4    B
+   7    6    5
+push_tiles  f(n) =  12 , where h =  1 , and cost =  11
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+push_tiles  f(n) =  12 , where h =  0 , and cost =  12
+
+ starting Best First, round  0 with  better_heuristic  initial configuration:
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  295 
+
+
+ starting A*, round  0 with  better_heuristic
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+better_heuristic  f(n) =  10 , where h =  10 , and cost =  0
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   B    3    6
+better_heuristic  f(n) =  10 , where h =  9 , and cost =  1
+
+- - - - - - - - - -
+
+   7    8    1
+   B    4    2
+   5    3    6
+better_heuristic  f(n) =  11 , where h =  9 , and cost =  2
+
+- - - - - - - - - -
+
+   B    8    1
+   7    4    2
+   5    3    6
+better_heuristic  f(n) =  12 , where h =  9 , and cost =  3
+
+- - - - - - - - - -
+
+   8    B    1
+   7    4    2
+   5    3    6
+better_heuristic  f(n) =  12 , where h =  8 , and cost =  4
+
+- - - - - - - - - -
+
+   8    1    B
+   7    4    2
+   5    3    6
+better_heuristic  f(n) =  13 , where h =  8 , and cost =  5
+
+- - - - - - - - - -
+
+   8    1    2
+   7    4    B
+   5    3    6
+better_heuristic  f(n) =  14 , where h =  8 , and cost =  6
+
+- - - - - - - - - -
+
+   8    1    2
+   7    B    4
+   5    3    6
+better_heuristic  f(n) =  14 , where h =  7 , and cost =  7
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    4
+   5    B    6
+better_heuristic  f(n) =  15 , where h =  7 , and cost =  8
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    4
+   5    6    B
+better_heuristic  f(n) =  15 , where h =  6 , and cost =  9
+
+- - - - - - - - - -
+
+   8    1    2
+   7    3    B
+   5    6    4
+better_heuristic  f(n) =  17 , where h =  7 , and cost =  10
+
+- - - - - - - - - -
+
+   8    1    2
+   7    B    3
+   5    6    4
+better_heuristic  f(n) =  18 , where h =  7 , and cost =  11
+
+- - - - - - - - - -
+
+   8    1    2
+   7    6    3
+   5    B    4
+better_heuristic  f(n) =  20 , where h =  8 , and cost =  12
+
+- - - - - - - - - -
+
+   8    1    2
+   7    6    3
+   B    5    4
+better_heuristic  f(n) =  21 , where h =  8 , and cost =  13
+
+- - - - - - - - - -
+
+   8    1    2
+   B    6    3
+   7    5    4
+better_heuristic  f(n) =  21 , where h =  7 , and cost =  14
+
+- - - - - - - - - -
+
+   B    1    2
+   8    6    3
+   7    5    4
+better_heuristic  f(n) =  21 , where h =  6 , and cost =  15
+
+- - - - - - - - - -
+
+   1    B    2
+   8    6    3
+   7    5    4
+better_heuristic  f(n) =  21 , where h =  5 , and cost =  16
+
+- - - - - - - - - -
+
+   1    2    B
+   8    6    3
+   7    5    4
+better_heuristic  f(n) =  21 , where h =  4 , and cost =  17
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    B
+   7    5    4
+better_heuristic  f(n) =  21 , where h =  3 , and cost =  18
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    5    B
+better_heuristic  f(n) =  21 , where h =  2 , and cost =  19
+
+- - - - - - - - - -
+
+   1    2    3
+   8    6    4
+   7    B    5
+better_heuristic  f(n) =  21 , where h =  1 , and cost =  20
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+better_heuristic  f(n) =  21 , where h =  0 , and cost =  21
+
+ starting Best First, round  1 with  better_heuristic  initial configuration:
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  928 
+
+
+ starting A*, round  1 with  better_heuristic
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+better_heuristic  f(n) =  9 , where h =  9 , and cost =  0
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    B
+   8    7    2
+better_heuristic  f(n) =  10 , where h =  9 , and cost =  1
+
+- - - - - - - - - -
+
+   3    5    1
+   6    B    4
+   8    7    2
+better_heuristic  f(n) =  10 , where h =  8 , and cost =  2
+
+- - - - - - - - - -
+
+   3    5    1
+   B    6    4
+   8    7    2
+better_heuristic  f(n) =  10 , where h =  7 , and cost =  3
+
+- - - - - - - - - -
+
+   B    5    1
+   3    6    4
+   8    7    2
+better_heuristic  f(n) =  11 , where h =  7 , and cost =  4
+
+- - - - - - - - - -
+
+   5    B    1
+   3    6    4
+   8    7    2
+better_heuristic  f(n) =  13 , where h =  8 , and cost =  5
+
+- - - - - - - - - -
+
+   5    1    B
+   3    6    4
+   8    7    2
+better_heuristic  f(n) =  13 , where h =  7 , and cost =  6
+
+- - - - - - - - - -
+
+   5    1    4
+   3    6    B
+   8    7    2
+better_heuristic  f(n) =  15 , where h =  8 , and cost =  7
+
+- - - - - - - - - -
+
+   5    1    4
+   3    B    6
+   8    7    2
+better_heuristic  f(n) =  16 , where h =  8 , and cost =  8
+
+- - - - - - - - - -
+
+   5    1    4
+   B    3    6
+   8    7    2
+better_heuristic  f(n) =  17 , where h =  8 , and cost =  9
+
+- - - - - - - - - -
+
+   B    1    4
+   5    3    6
+   8    7    2
+better_heuristic  f(n) =  18 , where h =  8 , and cost =  10
+
+- - - - - - - - - -
+
+   1    B    4
+   5    3    6
+   8    7    2
+better_heuristic  f(n) =  18 , where h =  7 , and cost =  11
+
+- - - - - - - - - -
+
+   1    3    4
+   5    B    6
+   8    7    2
+better_heuristic  f(n) =  19 , where h =  7 , and cost =  12
+
+- - - - - - - - - -
+
+   1    3    4
+   B    5    6
+   8    7    2
+better_heuristic  f(n) =  20 , where h =  7 , and cost =  13
+
+- - - - - - - - - -
+
+   1    3    4
+   8    5    6
+   B    7    2
+better_heuristic  f(n) =  20 , where h =  6 , and cost =  14
+
+- - - - - - - - - -
+
+   1    3    4
+   8    5    6
+   7    B    2
+better_heuristic  f(n) =  20 , where h =  5 , and cost =  15
+
+- - - - - - - - - -
+
+   1    3    4
+   8    B    6
+   7    5    2
+better_heuristic  f(n) =  21 , where h =  5 , and cost =  16
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    B
+   7    5    2
+better_heuristic  f(n) =  22 , where h =  5 , and cost =  17
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    2
+   7    5    B
+better_heuristic  f(n) =  23 , where h =  5 , and cost =  18
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    2
+   7    B    5
+better_heuristic  f(n) =  23 , where h =  4 , and cost =  19
+
+- - - - - - - - - -
+
+   1    3    4
+   8    B    2
+   7    6    5
+better_heuristic  f(n) =  23 , where h =  3 , and cost =  20
+
+- - - - - - - - - -
+
+   1    3    4
+   8    2    B
+   7    6    5
+better_heuristic  f(n) =  24 , where h =  3 , and cost =  21
+
+- - - - - - - - - -
+
+   1    3    B
+   8    2    4
+   7    6    5
+better_heuristic  f(n) =  24 , where h =  2 , and cost =  22
+
+- - - - - - - - - -
+
+   1    B    3
+   8    2    4
+   7    6    5
+better_heuristic  f(n) =  24 , where h =  1 , and cost =  23
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+better_heuristic  f(n) =  24 , where h =  0 , and cost =  24
+
+ starting Best First, round  2 with  better_heuristic  initial configuration:
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  698 
+
+
+ starting A*, round  2 with  better_heuristic
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+better_heuristic  f(n) =  5 , where h =  5 , and cost =  0
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    B
+   7    5    3
+better_heuristic  f(n) =  6 , where h =  5 , and cost =  1
+
+- - - - - - - - - -
+
+   1    6    4
+   8    B    2
+   7    5    3
+better_heuristic  f(n) =  7 , where h =  5 , and cost =  2
+
+- - - - - - - - - -
+
+   1    B    4
+   8    6    2
+   7    5    3
+better_heuristic  f(n) =  8 , where h =  5 , and cost =  3
+
+- - - - - - - - - -
+
+   1    4    B
+   8    6    2
+   7    5    3
+better_heuristic  f(n) =  9 , where h =  5 , and cost =  4
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    B
+   7    5    3
+better_heuristic  f(n) =  10 , where h =  5 , and cost =  5
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    5    B
+better_heuristic  f(n) =  11 , where h =  5 , and cost =  6
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    B    5
+better_heuristic  f(n) =  11 , where h =  4 , and cost =  7
+
+- - - - - - - - - -
+
+   1    4    2
+   8    B    3
+   7    6    5
+better_heuristic  f(n) =  11 , where h =  3 , and cost =  8
+
+- - - - - - - - - -
+
+   1    B    2
+   8    4    3
+   7    6    5
+better_heuristic  f(n) =  12 , where h =  3 , and cost =  9
+
+- - - - - - - - - -
+
+   1    2    B
+   8    4    3
+   7    6    5
+better_heuristic  f(n) =  12 , where h =  2 , and cost =  10
+
+- - - - - - - - - -
+
+   1    2    3
+   8    4    B
+   7    6    5
+better_heuristic  f(n) =  12 , where h =  1 , and cost =  11
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+better_heuristic  f(n) =  12 , where h =  0 , and cost =  12
+
+ starting Best First, round  0 with  inadmissible  initial configuration:
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  959 
+
+
+ starting A*, round  0 with  inadmissible
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   3    B    6
+inadmissible  f(n) =  16 , where h =  16 , and cost =  0
+
+- - - - - - - - - -
+
+   7    8    1
+   5    4    2
+   B    3    6
+inadmissible  f(n) =  17 , where h =  16 , and cost =  1
+
+- - - - - - - - - -
+
+   7    8    1
+   B    4    2
+   5    3    6
+inadmissible  f(n) =  18 , where h =  16 , and cost =  2
+
+- - - - - - - - - -
+
+   B    8    1
+   7    4    2
+   5    3    6
+inadmissible  f(n) =  19 , where h =  16 , and cost =  3
+
+- - - - - - - - - -
+
+   8    B    1
+   7    4    2
+   5    3    6
+inadmissible  f(n) =  20 , where h =  16 , and cost =  4
+
+- - - - - - - - - -
+
+   8    1    B
+   7    4    2
+   5    3    6
+inadmissible  f(n) =  21 , where h =  16 , and cost =  5
+
+- - - - - - - - - -
+
+   8    1    2
+   7    4    B
+   5    3    6
+inadmissible  f(n) =  22 , where h =  16 , and cost =  6
+
+- - - - - - - - - -
+
+   8    1    2
+   7    4    6
+   5    3    B
+inadmissible  f(n) =  23 , where h =  16 , and cost =  7
+
+- - - - - - - - - -
+
+   8    1    2
+   7    4    6
+   5    B    3
+inadmissible  f(n) =  24 , where h =  16 , and cost =  8
+
+- - - - - - - - - -
+
+   8    1    2
+   7    4    6
+   B    5    3
+inadmissible  f(n) =  25 , where h =  16 , and cost =  9
+
+- - - - - - - - - -
+
+   8    1    2
+   B    4    6
+   7    5    3
+inadmissible  f(n) =  24 , where h =  14 , and cost =  10
+
+- - - - - - - - - -
+
+   B    1    2
+   8    4    6
+   7    5    3
+inadmissible  f(n) =  23 , where h =  12 , and cost =  11
+
+- - - - - - - - - -
+
+   1    B    2
+   8    4    6
+   7    5    3
+inadmissible  f(n) =  22 , where h =  10 , and cost =  12
+
+- - - - - - - - - -
+
+   1    4    2
+   8    B    6
+   7    5    3
+inadmissible  f(n) =  23 , where h =  10 , and cost =  13
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    B
+   7    5    3
+inadmissible  f(n) =  24 , where h =  10 , and cost =  14
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    5    B
+inadmissible  f(n) =  25 , where h =  10 , and cost =  15
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    B    5
+inadmissible  f(n) =  24 , where h =  8 , and cost =  16
+
+- - - - - - - - - -
+
+   1    4    2
+   8    B    3
+   7    6    5
+inadmissible  f(n) =  23 , where h =  6 , and cost =  17
+
+- - - - - - - - - -
+
+   1    B    2
+   8    4    3
+   7    6    5
+inadmissible  f(n) =  24 , where h =  6 , and cost =  18
+
+- - - - - - - - - -
+
+   1    2    B
+   8    4    3
+   7    6    5
+inadmissible  f(n) =  23 , where h =  4 , and cost =  19
+
+- - - - - - - - - -
+
+   1    2    3
+   8    4    B
+   7    6    5
+inadmissible  f(n) =  22 , where h =  2 , and cost =  20
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+inadmissible  f(n) =  21 , where h =  0 , and cost =  21
+
+ starting Best First, round  1 with  inadmissible  initial configuration:
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  700 
+
+
+ starting A*, round  1 with  inadmissible
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    2
+   8    7    B
+inadmissible  f(n) =  16 , where h =  16 , and cost =  0
+
+- - - - - - - - - -
+
+   3    5    1
+   6    4    B
+   8    7    2
+inadmissible  f(n) =  17 , where h =  16 , and cost =  1
+
+- - - - - - - - - -
+
+   3    5    1
+   6    B    4
+   8    7    2
+inadmissible  f(n) =  16 , where h =  14 , and cost =  2
+
+- - - - - - - - - -
+
+   3    5    1
+   B    6    4
+   8    7    2
+inadmissible  f(n) =  17 , where h =  14 , and cost =  3
+
+- - - - - - - - - -
+
+   B    5    1
+   3    6    4
+   8    7    2
+inadmissible  f(n) =  18 , where h =  14 , and cost =  4
+
+- - - - - - - - - -
+
+   5    B    1
+   3    6    4
+   8    7    2
+inadmissible  f(n) =  19 , where h =  14 , and cost =  5
+
+- - - - - - - - - -
+
+   5    1    B
+   3    6    4
+   8    7    2
+inadmissible  f(n) =  20 , where h =  14 , and cost =  6
+
+- - - - - - - - - -
+
+   5    1    4
+   3    6    B
+   8    7    2
+inadmissible  f(n) =  23 , where h =  16 , and cost =  7
+
+- - - - - - - - - -
+
+   5    1    4
+   3    B    6
+   8    7    2
+inadmissible  f(n) =  24 , where h =  16 , and cost =  8
+
+- - - - - - - - - -
+
+   5    1    4
+   B    3    6
+   8    7    2
+inadmissible  f(n) =  25 , where h =  16 , and cost =  9
+
+- - - - - - - - - -
+
+   B    1    4
+   5    3    6
+   8    7    2
+inadmissible  f(n) =  26 , where h =  16 , and cost =  10
+
+- - - - - - - - - -
+
+   1    B    4
+   5    3    6
+   8    7    2
+inadmissible  f(n) =  25 , where h =  14 , and cost =  11
+
+- - - - - - - - - -
+
+   1    3    4
+   5    B    6
+   8    7    2
+inadmissible  f(n) =  26 , where h =  14 , and cost =  12
+
+- - - - - - - - - -
+
+   1    3    4
+   B    5    6
+   8    7    2
+inadmissible  f(n) =  27 , where h =  14 , and cost =  13
+
+- - - - - - - - - -
+
+   1    3    4
+   8    5    6
+   B    7    2
+inadmissible  f(n) =  26 , where h =  12 , and cost =  14
+
+- - - - - - - - - -
+
+   1    3    4
+   8    5    6
+   7    B    2
+inadmissible  f(n) =  25 , where h =  10 , and cost =  15
+
+- - - - - - - - - -
+
+   1    3    4
+   8    B    6
+   7    5    2
+inadmissible  f(n) =  26 , where h =  10 , and cost =  16
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    B
+   7    5    2
+inadmissible  f(n) =  27 , where h =  10 , and cost =  17
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    2
+   7    5    B
+inadmissible  f(n) =  28 , where h =  10 , and cost =  18
+
+- - - - - - - - - -
+
+   1    3    4
+   8    6    2
+   7    B    5
+inadmissible  f(n) =  27 , where h =  8 , and cost =  19
+
+- - - - - - - - - -
+
+   1    3    4
+   8    B    2
+   7    6    5
+inadmissible  f(n) =  26 , where h =  6 , and cost =  20
+
+- - - - - - - - - -
+
+   1    3    4
+   8    2    B
+   7    6    5
+inadmissible  f(n) =  27 , where h =  6 , and cost =  21
+
+- - - - - - - - - -
+
+   1    3    B
+   8    2    4
+   7    6    5
+inadmissible  f(n) =  26 , where h =  4 , and cost =  22
+
+- - - - - - - - - -
+
+   1    B    3
+   8    2    4
+   7    6    5
+inadmissible  f(n) =  25 , where h =  2 , and cost =  23
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+inadmissible  f(n) =  24 , where h =  0 , and cost =  24
+
+ starting Best First, round  2 with  inadmissible  initial configuration:
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+
+-----This might take a while-----
+
+The path tends to be long, so we'll just say that the cost was  166 
+
+
+ starting A*, round  2 with  inadmissible
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    3
+   7    5    B
+inadmissible  f(n) =  10 , where h =  10 , and cost =  0
+
+- - - - - - - - - -
+
+   1    6    4
+   8    2    B
+   7    5    3
+inadmissible  f(n) =  11 , where h =  10 , and cost =  1
+
+- - - - - - - - - -
+
+   1    6    4
+   8    B    2
+   7    5    3
+inadmissible  f(n) =  12 , where h =  10 , and cost =  2
+
+- - - - - - - - - -
+
+   1    B    4
+   8    6    2
+   7    5    3
+inadmissible  f(n) =  13 , where h =  10 , and cost =  3
+
+- - - - - - - - - -
+
+   1    4    B
+   8    6    2
+   7    5    3
+inadmissible  f(n) =  14 , where h =  10 , and cost =  4
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    B
+   7    5    3
+inadmissible  f(n) =  15 , where h =  10 , and cost =  5
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    5    B
+inadmissible  f(n) =  16 , where h =  10 , and cost =  6
+
+- - - - - - - - - -
+
+   1    4    2
+   8    6    3
+   7    B    5
+inadmissible  f(n) =  15 , where h =  8 , and cost =  7
+
+- - - - - - - - - -
+
+   1    4    2
+   8    B    3
+   7    6    5
+inadmissible  f(n) =  14 , where h =  6 , and cost =  8
+
+- - - - - - - - - -
+
+   1    B    2
+   8    4    3
+   7    6    5
+inadmissible  f(n) =  15 , where h =  6 , and cost =  9
+
+- - - - - - - - - -
+
+   1    2    B
+   8    4    3
+   7    6    5
+inadmissible  f(n) =  14 , where h =  4 , and cost =  10
+
+- - - - - - - - - -
+
+   1    2    3
+   8    4    B
+   7    6    5
+inadmissible  f(n) =  13 , where h =  2 , and cost =  11
+
+- - - - - - - - - -
+
+   1    2    3
+   8    B    4
+   7    6    5
+inadmissible  f(n) =  12 , where h =  0 , and cost =  12
+------------------------------ timers -----------------------------
+Best First with  out_of_place  took  [0.6570486458949745, 0.3705127271823585, 0.03696692595258355]  seconds respectively
+Best First with  manhattan  took  [0.2913872944191098, 0.13075160514563322, 0.027630276046693325]  seconds respectively
+Best First with  min_manhattan_out_of_place  took  [6.422690706793219, 0.11422372190281749, 0.032944772858172655]  seconds respectively
+Best First with  push_tiles  took  [0.7811017441563308, 0.4481889153830707, 0.05537752993404865]  seconds respectively
+Best First with  better_heuristic  took  [0.13512691482901573, 0.7373656528070569, 0.4864889122545719]  seconds respectively
+Best First with  inadmissible  took  [0.7999105309136212, 0.4651463949121535, 0.05954424710944295]  seconds respectively
+
+
+A* with  out_of_place  took  [13.595517264213413, 308.8241243879311, 0.022230076137930155]  seconds respectively
+A* with  manhattan  took  [27.83305580774322, 367.976808229927, 0.0860027908347547]  seconds respectively
+A* with  min_manhattan_out_of_place  took  [45.558422076981515, 692.7713109571487, 0.09201604966074228]  seconds respectively
+A* with  push_tiles  took  [14.707985909190029, 296.39466968085617, 0.02698863111436367]  seconds respectively
+A* with  better_heuristic  took  [5.659960836637765, 157.26438853191212, 0.032206540927290916]  seconds respectively
+A* with  inadmissible  took  [1.114810078870505, 20.765508043114096, 0.19258944690227509]  seconds respectively
